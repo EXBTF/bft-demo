@@ -78,7 +78,7 @@ public class FBDemo
       private static string getSignContent(IDictionary<string, string> parameters)
         {
             // 第一步：把字典按Key的字母顺序排序
-            IDictionary<string, string> sortedParams = new SortedDictionary<string, string>(parameters);
+            IDictionary<string, string> sortedParams = new SortedDictionary<string, string>(parameters,StringComparer.Ordinal);
             IEnumerator<KeyValuePair<string, string>> dem = sortedParams.GetEnumerator();
 
             // 第二步：把所有参数名和参数值串在一起
